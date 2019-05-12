@@ -31,10 +31,10 @@ public class Player extends Sprite {
       next_position = Math.min(currentPos + (steps*3), board.getFinishPos());
       System.out.println(this + " walks from " + (currentPos + steps) + " to " + next_position);
     }
-    if(currentPos == board.stopWalk()){
-      System.out.println("Stop walk");
-      next_position = currentPos;
-      System.out.println(this + " walks from " + currentPos + " to " + next_position);
+    if(next_position == board.forwardEight()){
+      System.out.println("Forward 8 steps");
+      next_position = Math.min(currentPos + (steps+8), board.getFinishPos());
+      System.out.println(this + " walks from " + (currentPos + steps) + " to " + next_position);
     }
     if(next_position == board.forwardFive()){
       System.out.println("Forward 5 steps");

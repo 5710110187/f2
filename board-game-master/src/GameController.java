@@ -38,15 +38,17 @@ public class GameController implements PlayerListener {
   private void rollDice() {
     d1.roll();
     d2.roll();
+
   }
 
   public void takeTurn() {
     if(winner != null)
       return;
 
-
+    
     rollDice();
     currentPlayer.walk(d1.getFace() + d2.getFace());
+      
   }
 
   private void changeTurn() {

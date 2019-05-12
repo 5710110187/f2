@@ -55,9 +55,9 @@ public class Board {
     int w_double = 27;
     return w_double;
   }
-  public int stopWalk(){
-    int w_stop = 60;
-    return w_stop;
+  public int forwardEight(){
+    int w_forward = 60;
+    return w_forward;
   }
   public int forwardFive(){
     int w_forward = 39;
